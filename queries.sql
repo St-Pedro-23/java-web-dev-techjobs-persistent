@@ -5,10 +5,15 @@
     skills VARCHAR
 
 ## Part 2: Test it with SQL
-    SELECT *
-    FROM employer
+    SELECT * FROM techjobs.employer
     WHERE location = "St. Louis City";
 
 ## Part 3: Test it with SQL
+    DROP TABLE techjobs.job;
 
 ## Part 4: Test it with SQL
+    SELECT name, description
+    FROM skill
+    INNER JOIN job_skills ON skills_id = job_skills.skills_id
+    WHERE skills_id IS NOT NULL
+    ORDER BY name; 
